@@ -22,7 +22,8 @@
     "typescript": "^3.6.3"
   },
   "scripts": {
-    "start": "concurrently \"cd server && ts-node src\" \"npm run start-client\"",
+    "start": "cd server && ts-node src",
+    "dev": "concurrently \"cd server && ts-node src\" \"npm run start-client\"",
     "start-client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
