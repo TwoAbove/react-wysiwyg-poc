@@ -3,12 +3,13 @@ import bodyParser from 'body-parser';
 
 import apiRouter from './router';
 
-const port = 3001;
+let port = 3001;
 
 const app = express();
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../build'));
+	port = Number.parseInt(process.env.PORT, 10);
+	app.use(express.static('../build'));
 }
 
 app.use(bodyParser.json());
