@@ -2,6 +2,7 @@
   "name": "react-wysiwyg-poc",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://chat-poc.herokuapp.com",
   "dependencies": {
     "@material-ui/core": "^4.4.3",
     "@types/express": "^4.17.1",
