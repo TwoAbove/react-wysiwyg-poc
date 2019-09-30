@@ -10,7 +10,7 @@ import {
 
 import Button from '@material-ui/core/Button';
 
-const type = 'html'
+const type = 'markdown'
 
 const editorStyles = ({ palette, spacing }: Theme) =>
 	createStyles({
