@@ -10,6 +10,8 @@ import {
 
 import Button from '@material-ui/core/Button';
 
+const type = 'html'
+
 const editorStyles = ({ palette, spacing }: Theme) =>
 	createStyles({
 		button: {
@@ -32,7 +34,7 @@ class Editor extends Component<EditorProps> {
 	state = {
 		value: RichTextEditor.createValueFromString(
 			this.props.initialText,
-			'markdown'
+			type
 		)
 	};
 
@@ -41,7 +43,7 @@ class Editor extends Component<EditorProps> {
 	};
 
 	handleClick = () => {
-		this.props.onSave(this.state.value.toString('markdown'));
+		this.props.onSave(this.state.value.toString(type));
 	};
 
 	render() {
